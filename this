@@ -1,0 +1,31 @@
+import webbrowser
+url = "https://instagram.com/014931500/"
+
+webbrowser.open(url)
+try:
+	import os, requests, colorama, json
+	from os import system
+	from colorama import Fore
+	system("title " + "Null Was Here - @014931500 - ")
+except Exception as m:
+  print("Something Went Wrong\n")
+  print(m)
+  input()
+  exit()
+
+print("Made with Love by @014931500 - @Jpno\n")
+#print(Fore.GREEN+"\n\n"+Fore.RESET)
+print("1 - KWT\n2 - KSA\n3 - UAE\n4 - OMN\n5 - QTR\n6 - BHR")
+mode=int(input("Enter Country Number: "))
+phone=input("Enter Phone Number: ")
+if mode ==1:country="KW"
+elif mode ==2:country="SA"
+elif mode ==3:country="AE"
+elif mode ==4:country="OM"
+elif mode ==5:country="QA"
+elif mode ==6:country="BH"
+print(Fore.GREEN+'\n===================================\n'+Fore.RESET)
+req=requests.get(f"http://caller-id.saedhamdan.com/index.php/UserManagement/search_number?number={phone}&country_code={country}",headers={"User-Agent":"01931500/69"}).text
+try:print(f'Name: {json.loads(req)["result"][0]["name"]}')
+except:print(Fore.RED+"Name: Not Found!")
+exit("insta : @014931500 - @Jpno ")
